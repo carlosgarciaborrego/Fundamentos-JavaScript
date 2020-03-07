@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Clase 28 - Como funciona el tiempo en JavaScript</title>
+  </head>
+  <body>
+    <script>
+        console.log('a')
+        //setTimeOut requiere de 2 parámetros, el primero es una función y el segundo es el tiempo que queremos que tarde en ejecutarse, expresado en milisegundos
+        setTimeout(function(){
+            console.log('b')
+        }, 2000)
+        //Lo podemos poner como una arrow function  ---> setTimeout(() => console.log('b'),2000)
+        console.log('c')
+
+
+        //si el mismo ejemplo de arriba lo pusieramos con 0 milisegundos, el orden en el que aparecerían en el navegador sería: a,c,b
+        //debido a que el navegador llamaría la funcion, y lo pasaría a la cola de tareas, una vez se ejecuta todo, entonces se ejecuta la cola de tareas y 
+        //la primera tarea es la funcion de muestra 'b'
+
+        
+    </script>
+  </body>
+</html>
